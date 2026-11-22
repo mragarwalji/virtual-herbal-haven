@@ -24,9 +24,7 @@ interface PlantInfo {
 };
 }
 
-const API =
-  import.meta.env.VITE_PLANT_API_URL ||
-  "http://localhost:8000";
+const API = import.meta.env.VITE_PLANT_API_URL || "http://localhost:8000";
 
 const normalizeName = (name: string) =>
   name.toLowerCase().replace(/[^a-z0-9]/g, "");
