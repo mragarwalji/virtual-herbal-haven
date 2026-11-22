@@ -51,16 +51,19 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:8080",
         "http://127.0.0.1:8080",
-        "http://192.168.29.35:8080",
+        "http://192.168.29.183:8080",
+        "https://vanvidya-6390d.web.app",
     ],
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
+
 
 
 @app.get("/health")
